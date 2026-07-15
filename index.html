@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BITECOA GPS</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+</head>
+
 <body>
-  <div class="card">
-    <h1>🌍 BITECOA GPS</h1>
-    <p class="subtitle">IoT Blockchain GPS Tracking</p>
-    <hr>
-    <p><b>Status :</b> <span id="status">🔴 Belum Aktif</span></p>
-    <p><b>Latitude :</b></p>
-    <h2 id="lat">-</h2>
-    <p><b>Longitude :</b></p>
-    <h2 id="lng">-</h2>
-    <p><b>Akurasi :</b></p>
-    <h2 id="acc">-</h2>
-    <p><b>Update :</b></p>
-    <h2 id="time">-</h2>
-    <div id="map">
-      🗺️ Peta akan ditampilkan di sini
+  <div class="container">
+    <div class="card">
+      <h1>🌍 BITECOA GPS</h1>
+      <p class="subtitle">IoT Blockchain GPS Tracking</p>
+      <hr>
+      <p><b>Status :</b> <span id="status">🔴 Belum Aktif</span></p>
+      <p><b>Latitude :</b></p>
+      <h2 id="lat">-</h2>
+      <p><b>Longitude :</b></p>
+      <h2 id="lng">-</h2>
+      <p><b>Akurasi :</b></p>
+      <h2 id="acc">-</h2>
+      <p><b>Update :</b></p>
+      <h2 id="time">-</h2>
+      <div id="map"></div>
+        <button id="btnMulai" onclick="mulaiGPS()">
+        ▶ Mulai Tracking
+        </button>
+        <button id="btnStop" onclick="stopGPS()" disabled>
+        ■ Berhenti
+        </button>
     </div>
-    <button id="btnMulai" onclick="mulaiGPS()">
-      ▶ Mulai Tracking
-    </button>
-    <button id="btnStop" onclick="stopGPS()" disabled>
-      ■ Berhenti
-    </button>
   </div>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Script GPS -->
+  <script src="script.js"></script>
 </body>
 </html>
