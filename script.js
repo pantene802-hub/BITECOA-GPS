@@ -99,8 +99,43 @@ function stopGPS(){
     document.getElementById("btnMulai").disabled=false;
     document.getElementById("btnStop").disabled=true;
 
+    }
+    function previewFoto(){
+
+    let file=document.getElementById("foto").files[0];
+
+    if(!file) return;
+
+    let reader=new FileReader();
+
+    reader.onload=function(e){
+
+        let img=document.getElementById("preview");
+
+        img.src=e.target.result;
+
+        img.style.display="block";
+
+    }
+
+    reader.readAsDataURL(file);
+
 }
 
+function uploadFoto(){
+
+    let file=document.getElementById("foto").files[0];
+
+    if(!file){
+
+        alert("Pilih foto terlebih dahulu.");
+
+        return;
+
+    }
+
+    alert("Foto siap dikirim ke server Bitecoa.");
+}
 // =============================
 // Kirim ke ESP32
 // =============================
