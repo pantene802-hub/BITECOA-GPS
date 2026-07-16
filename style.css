@@ -90,6 +90,22 @@ button:disabled{
 h1{
     font-size:28px;
 }
+input[type=file]{
+    width:100%;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+#preview{
+    border:3px solid #16a34a;
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
+h3{
+    margin-top:20px;
+    color:#16a34a;
+}
 button{
     font-size:16px;
 }
