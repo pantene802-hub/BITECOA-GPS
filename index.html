@@ -39,6 +39,20 @@ href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
         <button id="btnStop" onclick="stopGPS()" disabled>
         ■ Berhenti
         </button>
+        <hr>
+        <h3>📷 Dokumentasi Pohon</h3>
+        <input
+        type="file"
+          id="foto"
+          accept="image/*"
+          capture="environment"
+          onchange="previewFoto()">
+        <br><br>
+        <img id="preview" style="display:none;width:100%;border-radius:12px;">
+        <br>
+        <button onclick="uploadFoto()">
+        ☁ Upload Foto
+        </button>
     </div>
   </div>
   <!-- Leaflet JS -->
